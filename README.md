@@ -22,8 +22,20 @@ composer install
 npm install
 ```
 
+#### Create the database and run the migrations
+
+Db name: `coopillenca` (empty)
+```bash
+php artisan migrate --seed
+```
+
 #### Run the project
 
 ```bash
+npm run dev
+//CTL+C to stop the process
+
+npm run build
+
 php artisan serve
 ```
