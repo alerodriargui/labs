@@ -1,6 +1,15 @@
 @extends('layouts.app')
 
+
 @section('content')
+<style>
+    body {
+        background-image: url('/images/tienda.jpg'); /* Reemplaza '/ruta/a/tu/imagen.jpg' con la ruta correcta a tu imagen */
+        background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
+        background-position: center; /* Centra la imagen en el fondo */
+        /* Otros estilos opcionales */
+    }
+</style>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">

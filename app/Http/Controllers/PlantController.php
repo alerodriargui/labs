@@ -5,20 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Plant;
 
-class HomeController extends Controller
+class PlantController extends Controller
 {
     /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
-    /**
-     * Show the application dashboard.
+     * Display the homepage with all plants.
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
