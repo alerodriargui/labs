@@ -54,7 +54,11 @@
                             <h3>{{ $plant->name }}</h3>
                             <p class="text-wrap">{{ $plant->description }}</p>
                             <p>{{ $plant->unit_price }}€</p>
-                        </div>
+                            <form method="POST" action="{{ route('add-to-cart') }}">
+                                @csrf
+                                <input type="hidden" name="plant_id" value="{{ $plant->id }}">
+                                <button type="submit" class="btn btn-primary">Añadir al carrito</button>
+                            </form>                        </div>
                     </div>
                     @endforeach
                 </div>
@@ -86,4 +90,5 @@
             });
         }
     </script>
+
 @endsection

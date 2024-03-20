@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\PlantController;
+use App\Http\Controllers\CartController;
 
 
 /*
@@ -28,4 +29,8 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
 Route::get('/', [PlantController::class, 'index']);
-Route::get('/products', 'ProductController@index');
+Route::get('/products', [ProductController::class, 'index']);
+Route::post('/add-to-cart', [CartController::class, 'addToCart'])->name('add-to-cart');
+Route::get('/cart', [CartController::class, 'showCart'])->name('cart');
+
+
