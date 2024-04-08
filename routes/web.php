@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\PlantController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\PedidoController;
+
 
 
 /*
@@ -33,6 +35,8 @@ Route::post('/products', [App\Http\Controllers\PlantController::class, 'store'])
 Route::post('/add-to-cart', [CartController::class, 'addToCart'])->name('add-to-cart');
 Route::get('/cart', [CartController::class, 'showCart'])->name('cart');
 Route::post('/remove-from-cart/{id}', [CartController::class, 'removeFromCart'])->name('remove-from-cart');
+Route::post('/realizar-pedido', [PedidoController::class, 'realizarPedido'])->name('realizar-pedido');
+Route::get('/formulario-pedido', [PedidoController::class, 'mostrarFormularioPedido'])->name('formulario-pedido');
 
 
 
