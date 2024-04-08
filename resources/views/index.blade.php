@@ -57,6 +57,11 @@
                             <form method="POST" action="{{ route('add-to-cart') }}">
                                 @csrf
                                 <input type="hidden" name="plant_id" value="{{ $plant->id }}">
+                                <div class="input-group mb-3">
+                                    <button type="button" class="btn btn-outline-secondary" onclick="decrementQuantity(this)">-</button>
+                                    <input type="text" name="quantity" class="form-control text-center" style="width: 20px;" value="1" readonly>
+                                    <button type="button" class="btn btn-outline-secondary" onclick="incrementQuantity(this)">+</button>
+                                </div>
                                 <button type="submit" class="btn btn-primary">Añadir al carrito</button>
                             </form>                        </div>
                     </div>
@@ -88,6 +93,21 @@
             .catch(function (error) {
                 console.error('Error al obtener los productos filtrados:', error);
             });
+        }
+    </script>
+    <script>
+        function incrementQuantity(button) {
+            var input = button.parentElement.querySelector('input[name="quantity"]');
+            var value = parseInt(input.value);
+            input.value = value + 1;
+        }
+
+        function decrementQuantity(button) {
+            var input = button.parentElement.querySelector('input[name="quantity"]');
+            var value = parseInt(input.value);
+            if (value > 1) {
+                input.value = value - 1;
+            }
         }
     </script>
 
