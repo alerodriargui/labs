@@ -17,7 +17,11 @@ class PlantController extends Controller
         // Obtener todas las plantas
         $plants = Plant::all();
 
-        // Pasar las plantas a la vista index.blade.php
-        return view('index', compact('plants'));
+
+        // Crear una cookie
+        $cookie = cookie('user', 'test', 60); // Cookie que dura 60 minutos
+
+        // Devolver la vista con la cookie
+        return response(view('index', compact('plants')))->withCookie($cookie);
     }
 }
