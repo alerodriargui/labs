@@ -5,6 +5,8 @@
 
 #### Have composer installed on your machine. [Download Composer](https://getcomposer.org/download/)
 
+#### Have node and npm installed on your machine. [Download Node.js](https://nodejs.org/en/download/)
+
 #### (In case PHP is installed via XAMPP) Allow zip downloads via composer
 
 navigate to the php.ini file in the xampp installation folder and uncomment the following line:
