@@ -14,7 +14,7 @@
 
             <div class="form-group mb-3">
                 <label for="description">Nombre científico</label>
-                <textarea name="description" id="cientificname" class="form-control" required></textarea>
+                <textarea name="description" id="scientific_name" class="form-control" required></textarea>
             </div>
 
             <div class="form-group mb-3">
@@ -23,17 +23,13 @@
             </div>
 
             <div class="form-group mb-3">
-                <label for="category">Categoría</label>
-                <select name="category" id="category" class="form-control" required>
-                    @foreach($categories as $category)
-                        <option value="{{ $category->id }}">{{ $category->name }}</option>
-                    @endforeach
+                <label for="season">Estación</label>
+                <select name="season" id="season" class="form-control" required>
+                    <option value="spring">Primavera</option>
+                    <option value="summer">Verano</option>
+                    <option value="autum">Otoño</option>
+                    <option value="winter">Invierno</option>
                 </select>
-            </div>
-
-            <div class="form-group mb-3">
-                <label for="amount">Cantidad</label>
-                <input type="number" name="amount" id="amount" class="form-control" required>
             </div>
 
             <div class="form-group mb-3">

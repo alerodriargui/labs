@@ -4,13 +4,16 @@
 
 <div class="container-fluid">
     <div class="row">
+        <button></button>
+    </div>
+    <div class="row">
         <div class="col-9">
             <div class="row mx-5 my-1 p-3 bg-light border rounded-2">
                 <!-- Filtros -->
                     <div class="col-3">
                         <h4 class="mb-3">Filtros</h4>
                         <div class="mb-3">
-                    <label for="name">Nombre:</label>
+                    <label for="name">Nombre</label>
                     <input type="text" id="name" class="form-control">
                     </div>
                     <div class="mb-3">
