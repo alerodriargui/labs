@@ -24,4 +24,9 @@ class PlantController extends Controller
         // Devolver la vista con la cookie
         return response(view('index', compact('plants')))->withCookie($cookie);
     }
+
+
+    public function store(){
+
+    }
 }

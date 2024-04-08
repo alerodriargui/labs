@@ -48,7 +48,7 @@
                     @foreach($plants as $plant)
                     <div class="col-12 mb-3 d-flex align-items-center">
                         <div class="product-image-container">
-                            <img class="product-image" src="{{ $plant->img_path }}" alt="{{ $plant->name }}" style="max-width: 300px; height: auto; padding-right: 50px">
+                            <img class="product-image" src="{{asset('storage/uploads' .basename($plant->img_path)) }}" alt="{{ $plant->name }}" style="max-width: 300px; height: auto; padding-right: 50px">
                         </div>
                         <div class="product-info ml-3">
                             <h3>{{ $plant->name }}</h3>

@@ -29,7 +29,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
 Route::get('/', [PlantController::class, 'index']);
-Route::get('/products', [ProductController::class, 'index']);
+Route::post('/products', [App\Http\Controllers\PlantController::class, 'store'])->name('plants.store');
 Route::post('/add-to-cart', [CartController::class, 'addToCart'])->name('add-to-cart');
 Route::get('/cart', [CartController::class, 'showCart'])->name('cart');
 Route::post('/remove-from-cart/{id}', [CartController::class, 'removeFromCart'])->name('remove-from-cart');

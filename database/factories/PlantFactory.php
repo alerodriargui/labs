@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Plant;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Arr;
 
 class PlantFactory extends Factory
 {
@@ -19,15 +20,15 @@ class PlantFactory extends Factory
      *
      * @return array
      */
-    public function definition()
+    public function definition(): array
     {
         return [
-            'name' => $this->faker->name,
-            'scientific_name' => $this->faker->word,
-            'season' => $this->faker->randomElement(['spring', 'summer', 'autum', 'winter']),
-            'description' => $this->faker->sentence,
-            'unit_price' => $this->faker->randomFloat(2, 1, 100),
-            'img_path' => $this->faker->imageUrl(),
+            'name' => fake()->name(),
+            'scientific_name' => fake()->name(),
+            'season' => fake()->randomElement(['spring', 'summer', 'autum', 'winter']),
+            'description' => fake()->sentence(),
+            'unit_price' => fake()->randomFloat(2, 1, 100),
+            'img_path' => fake()->imageUrl(),
         ];
     }
 }
