@@ -32,5 +32,7 @@ Route::get('/', [PlantController::class, 'index']);
 Route::get('/products', [ProductController::class, 'index']);
 Route::post('/add-to-cart', [CartController::class, 'addToCart'])->name('add-to-cart');
 Route::get('/cart', [CartController::class, 'showCart'])->name('cart');
+Route::post('/remove-from-cart/{id}', [CartController::class, 'removeFromCart'])->name('remove-from-cart');
+
 
 
