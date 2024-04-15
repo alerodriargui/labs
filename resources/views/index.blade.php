@@ -4,7 +4,7 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-9">
+        <div class="col-12">
             <div class="row mx-5 my-1 p-3 bg-light border rounded-2">
                 <!-- Filtros -->
                     <div class="col-3">
