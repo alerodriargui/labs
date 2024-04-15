@@ -4,9 +4,6 @@
 
 <div class="container-fluid">
     <div class="row">
-        <button></button>
-    </div>
-    <div class="row">
         <div class="col-9">
             <div class="row mx-5 my-1 p-3 bg-light border rounded-2">
                 <!-- Filtros -->
