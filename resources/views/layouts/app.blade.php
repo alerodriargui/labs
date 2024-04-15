@@ -75,6 +75,7 @@
                                         @csrf
                                     </form>
                                     <a class="dropdown-item" href="{{ route('cart') }}">Carrito</a>
+                                    <a class="dropdown-item" href="{{ route('cart') }}">Mis facturas</a>
 
                                 </div>
                             </li>
