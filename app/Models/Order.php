@@ -13,11 +13,15 @@ class Order extends Model
         return $this->belongsTo(User::class, 'client_id');
     }
 
-    // Relación con el modelo Address
-    public function address()
+    public function plants()
     {
-        return $this->belongsTo(Address::class, 'address_id');
+        return $this->belongsToMany(Plant::class, 'plant_order', 'order_id', 'plant_id')
+            ->withPivot('amount');
     }
+    
+    protected $fillable = [
+        'address',
+    ];
 
     // Definición del atributo status como un enum
     protected $statusOptions = [

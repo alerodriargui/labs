@@ -22,4 +22,10 @@ class Plant extends Model
         'unit_price',
         'img_path',
     ];
+
+    public function orders()
+    {
+        return $this->belongsToMany(Order::class, 'plant_order', 'plant_id', 'order_id')
+            ->withPivot('amount');
+    }
 }
