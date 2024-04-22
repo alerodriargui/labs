@@ -39,7 +39,7 @@
 
             <div class="form-group mb-3">
                 <label for="image">Imagen</label>
-                <input type="file" name="image" id="image" class="form-control-file">
+                <input type="file" name="image" id="image" class="form-control-file" required>
             </div>
 
             <button type="submit" class="btn btn-primary">Añadir producto</button>
