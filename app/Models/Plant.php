@@ -9,6 +9,10 @@ class Plant extends Model
 {
     use HasFactory;
 
+    protected $table = 'plant'; // Nombre de la tabla
+
+    const CREATED_AT = 'created_at'; // Nombre de la columna de creación
+    const UPDATED_AT = 'updated_at'; // Nombre de la columna de actualización
     /**
      * The attributes that are mass assignable.
      *

@@ -70,6 +70,7 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->decimal('unit_price', 8, 2);
             $table->string('img_path')->nullable();
+            $table->timestamps();
         });
 
         Schema::create('plant_in_garden', function (Blueprint $table) {

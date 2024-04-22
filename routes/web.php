@@ -31,7 +31,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
 Route::get('/', [PlantController::class, 'index']);
-Route::post('/products', [App\Http\Controllers\PlantController::class, 'store'])->name('plants.store');
+Route::post('/products', [App\Http\Controllers\PlantController::class, 'store'])->name('plant.store');
 Route::get('/subir_producto', [App\Http\Controllers\PlantController::class, 'create'])->name('subir_producto');
 
 Route::post('/add-to-cart', [CartController::class, 'addToCart'])->name('add-to-cart');

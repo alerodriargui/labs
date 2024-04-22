@@ -4,7 +4,7 @@
     <div class="container" style="min-height: 100vh;">
         <h2>Subir Planta</h2>
 
-        <form method="POST" action="{{ route('plants.store') }}" enctype="multipart/form-data">
+        <form method="POST" action="{{ route('plant.store') }}" enctype="multipart/form-data">
             @csrf
 
             <div class="form-group mb-3">
@@ -13,8 +13,8 @@
             </div>
 
             <div class="form-group mb-3">
-                <label for="description">Nombre científico</label>
-                <textarea name="description" id="scientific_name" class="form-control" required></textarea>
+                <label for="scientific_name">Nombre científico</label>
+                <textarea name="scientific_name" id="scientific_name" class="form-control" required></textarea>
             </div>
 
             <div class="form-group mb-3">
@@ -39,7 +39,7 @@
 
             <div class="form-group mb-3">
                 <label for="image">Imagen</label>
-                <input type="file" name="image" id="image" class="form-control-file" required>
+                <input type="file" name="image" id="image" class="form-control-file">
             </div>
 
             <button type="submit" class="btn btn-primary">Añadir producto</button>
