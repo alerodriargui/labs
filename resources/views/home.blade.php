@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app')<!--Define la plantilla que extiende -->
 
 @section('content')
 <div class="container">
