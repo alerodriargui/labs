@@ -40,6 +40,8 @@ class PlantController extends Controller
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
         ]);
 
+        echo $request;
+
         // Sube la imagen a storage/app/public/images publicly
         $imagePath = $request->file('image')->store('uploads', 'public');
 
@@ -50,8 +52,11 @@ class PlantController extends Controller
             'description' => $request->input('description'),
             'season' => $request->input('season'),
             'unit_price' => $request->input('unit_price'),
-            'image_url' => $imagePath, // Almacena la ruta de la imagen en la base de datos
+            'img_path' => $imagePath, // Almacena la ruta de la imagen en la base de datos
         ]);
+
+        echo $plant;
+
 
         $plant->save();
 

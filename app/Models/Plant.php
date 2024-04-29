@@ -9,6 +9,10 @@ class Plant extends Model
 {
     use HasFactory;
 
+    protected $table = 'plant'; // Nombre de la tabla
+
+    const CREATED_AT = 'created_at'; // Nombre de la columna de creación
+    const UPDATED_AT = 'updated_at'; // Nombre de la columna de actualización
     /**
      * The attributes that are mass assignable.
      *
@@ -22,4 +26,10 @@ class Plant extends Model
         'unit_price',
         'img_path',
     ];
+
+    public function orders()
+    {
+        return $this->belongsToMany(Order::class, 'plant_order', 'plant_id', 'order_id')
+            ->withPivot('amount');
+    }
 }

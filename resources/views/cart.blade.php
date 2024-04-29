@@ -26,6 +26,8 @@
                             </form>
                         </div>
                         <p class="card-text">Precio unitario: {{ $plant->unit_price }}€</p>
+                        <p class="card-text">Cantidad en carrito: {{ $cartItems[$plant->id] }}</p>
+                        <p class="card-text">Precio total: {{ $plant->unit_price * $cartItems[$plant->id] }}€</p>
                         <img src="{{ $plant->img_path }}" class="img-fluid rounded" alt="{{ $plant->name }}" style="max-width: 330px; max-height: 330px;">
                     </div>
                 </div>
