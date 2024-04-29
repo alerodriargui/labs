@@ -33,6 +33,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/', [PlantController::class, 'index']);
 Route::post('/products', [App\Http\Controllers\PlantController::class, 'store'])->name('plants.store');
 Route::get('/subir_producto', [App\Http\Controllers\PlantController::class, 'create'])->name('subir_producto');
+Route::get('/plant/{id_plant}', [App\Http\Controllers\PlantController::class, 'details'])->name('detalles_planta');
 
 Route::post('/add-to-cart', [CartController::class, 'addToCart'])->name('add-to-cart');
 Route::get('/cart', [CartController::class, 'showCart'])->name('cart');

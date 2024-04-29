@@ -4,9 +4,6 @@
 
 <div class="container-fluid">
     <div class="row">
-        <button></button>
-    </div>
-    <div class="row">
         <div class="col-9">
             <div class="row mx-5 my-1 p-3 bg-light border rounded-2">
                 <!-- Filtros -->
@@ -54,7 +51,9 @@
                             <img class="product-image" src="{{asset('storage/uploads' .basename($plant->img_path)) }}" alt="{{ $plant->name }}" style="max-width: 300px; height: auto; padding-right: 50px">
                         </div>
                         <div class="product-info ml-3">
+                        <a href="{{route('detalles_planta',['id_plant' => $plant->id]) }}">
                             <h3>{{ $plant->name }}</h3>
+                            </a>
                             <p class="text-wrap">{{ $plant->description }}</p>
                             <p>{{ $plant->unit_price }}€</p>
                             <form method="POST" action="{{ route('add-to-cart') }}">

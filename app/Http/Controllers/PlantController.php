@@ -65,4 +65,10 @@ class PlantController extends Controller
     public function create(){
         return view('plants.create');
     }
+
+    //Aques
+    public function details($id_plant){
+        $plant = Plant::findOrFail($id_plant);
+        return response(view('plants.details', compact('plant')));
+    }
 }
