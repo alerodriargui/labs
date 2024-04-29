@@ -33,7 +33,7 @@ class CartController extends Controller
 {
     // Validar la solicitud
     $request->validate([
-        'plant_id' => 'required|exists:plants,id',
+        'plant_id' => 'required|exists:plant,id',
     ]);
 
     // Obtener el ID de la planta del formulario
